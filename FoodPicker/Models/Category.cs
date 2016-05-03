@@ -14,6 +14,6 @@ namespace FoodPicker.Models
         [StringLength(20, MinimumLength = 3)]
         public string CategoryName { get; set; }
 
-        public virtual ICollection<CategoryTag> CategoryTags { get; set; }
+        public virtual ICollection<Food> Foods { get; set; }
     }
 }

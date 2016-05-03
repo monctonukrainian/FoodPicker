@@ -10,6 +10,7 @@ namespace FoodPicker.Models
         public int CategoryID { get; set; }
         public int FoodID { get; set; }
 
+
         public virtual Category Category { get; set; }
 
         public virtual Food Food { get; set; }

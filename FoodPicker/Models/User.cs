@@ -24,11 +24,11 @@ namespace FoodPicker.Models
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-        public virtual ICollection<Favourite> Favourites { get; set; }
+        public virtual ICollection<Food> Foods { get; set; }
 
         public virtual ICollection<Rating> Ratings { get; set; }
 
-        public virtual Restaurant Restaurant { get; set; }
+       
 
         [Display(Name = "Full Name")]
         public string FullName

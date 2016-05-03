@@ -35,9 +35,9 @@ namespace FoodPicker.Models
         public int UserID { get; set; }
 
 
-        public ICollection<Food> Foods { get; set; }
+        public virtual ICollection<Food> Foods { get; set; }
 
-        public User RestaurantOwner { get; set; }
+        public virtual  User Owner { get; set; }
 
     }
 }

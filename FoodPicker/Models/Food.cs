@@ -17,6 +17,8 @@ namespace FoodPicker.Models
         [Required]
         public string Description { get; set; }
 
+        public string ImageName { get; set; }
+
         public int RestaurantID { get; set; }//FK
         [Required]
         [DataType(DataType.Currency)]
@@ -28,10 +30,10 @@ namespace FoodPicker.Models
         [Display(Name = "Date Added")]
         public DateTime DateAdded { get; set; }
 
-        public float AverageRating { get; set; }
+        public float? AverageRating { get; set; }
 
-        public virtual ICollection<CategoryTag> CategoryTags { get; set; }
-        public virtual ICollection<Favourite> Favourites { get; set; }
+        public virtual ICollection<Category> Categories { get; set; }
+        public virtual ICollection<User> Users { get; set; }
         public virtual ICollection<Rating> Ratings { get; set; }
         public virtual Restaurant Restaurant { get; set; }
 

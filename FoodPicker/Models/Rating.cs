@@ -8,6 +8,7 @@ namespace FoodPicker.Models
 {
     public class Rating
     {
+        public int RatingID { get; set; }
         public int FoodID { get; set; }
         public int UserID { get; set; }
 
