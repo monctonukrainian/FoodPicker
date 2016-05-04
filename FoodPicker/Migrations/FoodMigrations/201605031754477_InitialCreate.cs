@@ -30,7 +30,7 @@ namespace FoodPicker.Migrations.FoodMigrations
                         AverageRating = c.Single(),
                     })
                 .PrimaryKey(t => t.FoodID)
-                .ForeignKey("dbo.Restaurant", t => t.RestaurantID, cascadeDelete: true)
+                .ForeignKey("dbo.Restaurant", t => t.RestaurantID)
                 .Index(t => t.RestaurantID);
             
             CreateTable(
@@ -43,8 +43,8 @@ namespace FoodPicker.Migrations.FoodMigrations
                         UserRating = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.RatingID)
-                .ForeignKey("dbo.Food", t => t.FoodID, cascadeDelete: true)
-                .ForeignKey("dbo.User", t => t.UserID, cascadeDelete: true)
+                .ForeignKey("dbo.Food", t => t.FoodID)
+                .ForeignKey("dbo.User", t => t.UserID)
                 .Index(t => t.FoodID)
                 .Index(t => t.UserID);
             
@@ -76,7 +76,7 @@ namespace FoodPicker.Migrations.FoodMigrations
                         UserID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.RestaurantID)
-                .ForeignKey("dbo.User", t => t.UserID, cascadeDelete: true)
+                .ForeignKey("dbo.User", t => t.UserID)
                 .Index(t => t.UserID);
             
             CreateTable(

@@ -178,6 +178,10 @@
     <Compile Include="Migrations\FoodMigrations\201605031754477_InitialCreate.Designer.cs">
       <DependentUpon>201605031754477_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\FoodMigrations\201605031923220_InitialCreate1.cs" />
+    <Compile Include="Migrations\FoodMigrations\201605031923220_InitialCreate1.Designer.cs">
+      <DependentUpon>201605031923220_InitialCreate1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\FoodMigrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -212,7 +216,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -261,6 +267,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\FoodMigrations\201605031754477_InitialCreate.resx">
       <DependentUpon>201605031754477_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\FoodMigrations\201605031923220_InitialCreate1.resx">
+      <DependentUpon>201605031923220_InitialCreate1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

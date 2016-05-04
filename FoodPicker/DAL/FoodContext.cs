@@ -29,6 +29,7 @@ namespace FoodPicker.DAL
         {
             //base.OnModelCreating(modelBuilder);
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
 
             modelBuilder.Entity<Category>()
                .HasMany(f => f.Foods).WithMany(i => i.Categories)

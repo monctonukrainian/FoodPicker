@@ -32,6 +32,9 @@ namespace FoodPicker.Migrations.FoodMigrations
                     Email = "jordan@foodpicker.com"
                 }
             };
+            users.ForEach(u => context.Users.AddOrUpdate(p => p.Email,u));
+            context.SaveChanges();
+
 
             var restaurants = new List<Restaurant>
             {
@@ -45,9 +48,11 @@ namespace FoodPicker.Migrations.FoodMigrations
                     Country = "Canada",
                     Province = "NB",
                     Phone ="(506) 555-5555",
-                    UserID = 2
+                    UserID = 1
                 }
             };
+            restaurants.ForEach(r => context.Restaurants.AddOrUpdate(p => p.Name,r));
+            context.SaveChanges();
 
             var categories = new List<Category>
             {
@@ -60,6 +65,8 @@ namespace FoodPicker.Migrations.FoodMigrations
                     CategoryName = "Gelato"
                 }
             };
+            categories.ForEach(c => context.Categories.AddOrUpdate(p => p.CategoryName,c));
+            context.SaveChanges();
 
             var foods = new List<Food>
             {
@@ -67,17 +74,21 @@ namespace FoodPicker.Migrations.FoodMigrations
                 {
                     Name = "Vanilla",
                     Description = "The base of all ice creams",
-                    RestaurantID = 1,
-                    Price = 2.99M
+                    RestaurantID = 3,
+                    Price = 2.99M,
+                    DateAdded=DateTime.Parse("2016-03-01")
                 },
                 new Food
                 {
                     Name = "Chocolate",
                     Description = "Favorite food of chocolate lovers",
-                    RestaurantID = 1,
-                    Price = 3.49M
+                    RestaurantID = 3,
+                    Price = 3.49M,
+                    DateAdded=DateTime.Parse("2016-04-01")
                 }
             };
+            foods.ForEach(c => context.Foods.AddOrUpdate(p => p.Name,c));
+            context.SaveChanges();
 
 
             //  This method will be called after migrating to the latest version.
